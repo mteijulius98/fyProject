@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-supervisor-header',
   template: `
-   <nav class="navbar">
+  <nav class="navbar">
   <div class="container-fluid">
       <div class="navbar-header">
           <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
@@ -83,11 +83,11 @@ import { Component, OnInit } from '@angular/core';
   </div>
 </nav>
 <!-- #Top Bar -->
-
+  
   `,
   styles: []
 })
-export class HeaderComponent implements OnInit {
+export class SupervisorHeaderComponent implements OnInit {
 
   constructor() { }
 

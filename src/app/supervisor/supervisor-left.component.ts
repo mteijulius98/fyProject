@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-left',
+  selector: 'app-supervisor-left',
   template: `
   <!-- Left Sidebar -->
   <aside id="leftsidebar" class="sidebar">
@@ -29,42 +29,35 @@ import { Component, OnInit } from '@angular/core';
       <div class="menu">
           <ul class="list">
               <li class="header">MY OPTIONS</li>
-              <li class="active">
-                  <a href="javascript:void(0);" class="menu-toggle">
-                      <i class="material-icons">speaker_notes</i>
-                      <span>messages</span>
-                  </a>
-                  <ul class="ml-menu">
-                      <li>
-                          <a href="../../pages/examples/sign-in.html">Announcements</a>
-                      </li>
-                      <li>
-                          <a href="../../pages/examples/sign-in.html">sent messages</a>
-                      </li>
-                      </ul>
-              </li>
+           
               <li class="active">
                   <a href="../../index.html">
-                      <i class="material-icons">note_add</i>
-                      <span>conceptnoteSubmission</span>
+                      <i class="material-icons">featured_play_list</i>
+                      <span>My Group</span>
                   </a>
               </li>
-              <li>
+              <li class="active">
                   <a href="../../pages/typography.html">
                       <i class="material-icons">view_list</i>
-                      <span>View Supervisor</span>
+                      <span>panel</span>
                   </a>
               </li>
-              <li>
+              <li class="active">
                   <a href="../../pages/helper-classes.html">
-                      <i class="material-icons">report</i>
-                      <span>Reports</span>
+                      <i class="material-icons">view_week</i>
+                      <span>Received Concept Note</span>
                   </a>
               </li>
-              <li>
+              <li class="active">
+                  <a href="../../pages/helper-classes.html">
+                      <i class="material-icons">archive</i>
+                      <span>Submitted Report</span>
+                  </a>
+              </li>
+              <li class="active">
                 <a href="../../pages/helper-classes.html">
-                    <i class="material-icons">assessment</i>
-                    <span>Project Archive</span>
+                    <i class="material-icons">person</i>
+                    <span>Profile</span>
                 </a>
             </li>    
           </ul>
@@ -180,7 +173,7 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles: []
 })
-export class LeftComponent implements OnInit {
+export class SupervisorLeftComponent implements OnInit {
 
   constructor() { }
 

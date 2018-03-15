@@ -1,9 +1,16 @@
-﻿.login-page {
-    background-color: #00BCD4;
+﻿// body,.login-page{
+//     background: rgb(33, 85, 163);
+    
+// }
+
+.login-page{
+    background-color: #00BCD5;
     padding-left: 0;
     max-width: 360px;
     margin: 5% auto;
     overflow-x: hidden;
+    
+        
 
     .login-box {
         .msg {
@@ -39,3 +46,4 @@
         }
     }
 }
+
