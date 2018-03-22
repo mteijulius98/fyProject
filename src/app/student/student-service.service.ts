@@ -19,6 +19,7 @@ getAnaucements(){
   return this.http.get( "http://localhost:8000/std/annaucements" ).map(
               (res: Response) => res.json());
   }
+  
 
   public viewSuperVisors(){
 

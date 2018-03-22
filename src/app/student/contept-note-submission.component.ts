@@ -5,7 +5,9 @@ import { Component, OnInit } from '@angular/core';
   template: `
   <app-header></app-header>
   <app-left></app-left>
+
   <section class="content">
+  
   <div class="container-fluid">
       <div class='panel panel-primary' align="center">
     <div  class='panel-heading'>
@@ -104,6 +106,7 @@ import { Component, OnInit } from '@angular/core';
 </div>
 
 <!-- Modal End -->
+
   </div>
 </section>
   `,

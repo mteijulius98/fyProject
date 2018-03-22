@@ -29,7 +29,7 @@ const APP_ROUTES: Routes = [
     {path: 'forgetpassword', component:ForgetPasswordComponent},
     {path: 'student-profile', component:StudentProfileComponent},
     //For students
-    {path: 'announcement', component:CordinatorAnnaucementComponent},
+    {path: 'student', component:CordinatorAnnaucementComponent},
     {path: 'reports', component:ReportsComponent},
     {path: 'view-supervisor', component:ViewSupervisorComponent,},
     {path: 'project-archive', component:ProjectArchiveComponent},

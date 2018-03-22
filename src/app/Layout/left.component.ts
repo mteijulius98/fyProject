@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
           </div>
           <div class="info-container">
               <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
-              <div class="email">john.doe@example.com</div>
+              
               <div class="btn-group user-helper-dropdown">
                   <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                   <ul class="dropdown-menu pull-right">
@@ -36,44 +36,39 @@ import { Component, OnInit } from '@angular/core';
                   </a>
                   <ul class="ml-menu">
                       <li>
-                          <a href="../../pages/examples/sign-in.html">Announcements</a>
+                          <a [routerLink]="['/student']">Announcements</a>
                       </li>
                       <li>
-                          <a href="../../pages/examples/sign-in.html">sent messages</a>
+                          <a [routerLink]="['/send-message']">sent messages</a>
                       </li>
                       </ul>
               </li>
               <li class="active">
-                  <a href="../../index.html">
+                  <a [routerLink]="['/conceptnote']">
                       <i class="material-icons">note_add</i>
                       <span>conceptnoteSubmission</span>
                   </a>
               </li>
               <li>
-                  <a href="../../pages/typography.html">
+                  <a [routerLink]="['/view-supervisor']">
                       <i class="material-icons">view_list</i>
                       <span>View Supervisor</span>
                   </a>
                   
               </li>
               <li>
-                  <a href="../../pages/helper-classes.html">
+                  <a [routerLink]="['/reports']">
                       <i class="material-icons">report</i>
                       <span>Reports</span>
                   </a>
               </li>
               <li>
-                <a href="../../pages/helper-classes.html">
+                <a [routerLink]="['/project-archive']">
                     <i class="material-icons">assessment</i>
                     <span>Project Archive</span>
                 </a>
             </li>    
-            <li>
-                <a href="../../pages/helper-classes.html">
-                    <i class="material-icons">assessment</i>
-                    <span>Concept Note Submission</span>
-                </a>
-            </li>    
+            
           </ul>
       </div>
       <!-- #Menu -->
@@ -188,6 +183,8 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class LeftComponent implements OnInit {
+    private userData:any=JSON.parse( sessionStorage.getItem('token'));
+
 
   constructor() { }
 

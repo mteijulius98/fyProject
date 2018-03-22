@@ -82,6 +82,7 @@ import { Component, OnInit } from '@angular/core';
       </div>
   </div>
 </nav>
+
 <!-- #Top Bar -->
 
   `,

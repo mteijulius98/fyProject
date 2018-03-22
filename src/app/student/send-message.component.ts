@@ -7,6 +7,7 @@ import { StudentServiceService } from './student-service.service';
   <app-header></app-header>
   <app-left></app-left>
   <section class="content">
+ 
   <div class="container-fluid">
 
       <div *ngIf="!hide" style="text-align: center;" class="alert alert-info">
@@ -25,7 +26,7 @@ import { StudentServiceService } from './student-service.service';
          <form class="" style="margin-top: 2px;"  #for="ngForm" (ngSubmit)="sendMessage(for.value)"  >
          <div class="form-group">
          <div class="form-line">
-             <textarea rows="15" class="form-control no-resize" placeholder="Please type what you want..."></textarea>
+             <textarea rows="5" class="form-control no-resize" placeholder="Please type what you want..."></textarea>
          </div>
      </div>
              <button type="submit" class="btn btn-primary form-control" style="text-align: center;margin-bottom: 5px;color: red;" [disabled]="!for.valid">send</button>
@@ -67,13 +68,14 @@ import { StudentServiceService } from './student-service.service';
       </div>
        <!-- see message -->
      </div>
-    
+   
   
   
   </div>
 </section>
   `,
   styles: [`
+  
   .write{
     box-shadow: 0 0 10px grey;
   }

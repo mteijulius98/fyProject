@@ -9,7 +9,8 @@ export class LoginServiceService {
   constructor(private http:Http) { }
   
   signin(userid:any,pass:any){
-    return this.http.get( "http://localhost:8000/login/l?id="+userid+"&&pass="+pass )
+    return this.http.get( "http://localhost:8000/api/auth?/username="+userid+"&password="+pass )
+   // http://localhost:8000/api/auth/?username=2015-04-02589&password=sabinusi12
   .map(
     (response:Response)=>{
       const token = response.json().token;
