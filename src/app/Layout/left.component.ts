@@ -16,7 +16,7 @@ import { Component, OnInit } from '@angular/core';
               <div class="btn-group user-helper-dropdown">
                   <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                   <ul class="dropdown-menu pull-right">
-                      <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                      <li><a href="javascript:void(0);"  ><i class="material-icons">person</i>Profile</a></li>
                       <li role="seperator" class="divider"></li>
                       
                       <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
@@ -54,6 +54,7 @@ import { Component, OnInit } from '@angular/core';
                       <i class="material-icons">view_list</i>
                       <span>View Supervisor</span>
                   </a>
+                  
               </li>
               <li>
                   <a href="../../pages/helper-classes.html">
@@ -65,6 +66,12 @@ import { Component, OnInit } from '@angular/core';
                 <a href="../../pages/helper-classes.html">
                     <i class="material-icons">assessment</i>
                     <span>Project Archive</span>
+                </a>
+            </li>    
+            <li>
+                <a href="../../pages/helper-classes.html">
+                    <i class="material-icons">assessment</i>
+                    <span>Concept Note Submission</span>
                 </a>
             </li>    
           </ul>

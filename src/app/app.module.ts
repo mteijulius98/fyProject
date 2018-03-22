@@ -29,6 +29,16 @@ import { CordinatorHeaderComponent } from './cordinator/cordinator-header.compon
 import { CordinatorLeftComponent } from './cordinator/cordinator-left.component';
 import { SupervisorHeaderComponent } from './supervisor/supervisor-header.component';
 import { SupervisorLeftComponent } from './supervisor/supervisor-left.component';
+import { FormsModule } from '@angular/forms';
+import { LoginServiceService } from './login-service.service';
+
+import { HttpModule } from '@angular/http';
+import { ForgetPasswordComponent } from './forget-password.component';
+import { RouterModule } from '@angular/router';
+import { StudentServiceService } from './student/student-service.service';
+import { ConteptNoteSubmissionComponent } from './student/contept-note-submission.component';
+import { StudentProfileComponent } from './student/student-profile.component';
+import{DataTablesModule} from 'angular-datatables';
 
 
 
@@ -60,14 +70,24 @@ import { SupervisorLeftComponent } from './supervisor/supervisor-left.component'
     CordinatorLeftComponent,
     SupervisorHeaderComponent,
     SupervisorLeftComponent,
+    ForgetPasswordComponent,
+    ConteptNoteSubmissionComponent,
+    StudentProfileComponent
     
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    FormsModule,
+    HttpModule,
+    RouterModule,
+    DataTablesModule
     
   ],
-  providers: [],
+  providers: [
+    LoginServiceService,
+    StudentServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

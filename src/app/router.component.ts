@@ -20,25 +20,40 @@ import { ReceivedConceptComponent } from "./supervisor/received-concept.componen
 import { StdMessagesComponent } from "./supervisor/std-messages.component";
 import { SubmittedReportComponent } from "./supervisor/submitted-report.component";
 import { SupervisorProfileComponent } from "./supervisor/supervisor-profile.component";
+import { ForgetPasswordComponent } from "./forget-password.component";
+import { ConteptNoteSubmissionComponent } from "./student/contept-note-submission.component";
+import { StudentProfileComponent } from "./student/student-profile.component";
 const APP_ROUTES: Routes = [
-    {path: '', component: LoginComponent},
-    {path:'header', component:HeaderComponent},
+   // {path: '', redirectTo: 'login', pathMatch: 'full' },
+    {path: '',  component: LoginComponent},
+    {path: 'forgetpassword', component:ForgetPasswordComponent},
+    {path: 'student-profile', component:StudentProfileComponent},
+    //For students
     {path: 'announcement', component:CordinatorAnnaucementComponent},
     {path: 'reports', component:ReportsComponent},
-    {path: 'view-supervisor', component:ViewSupervisorComponent},
+    {path: 'view-supervisor', component:ViewSupervisorComponent,},
     {path: 'project-archive', component:ProjectArchiveComponent},
     {path: 'send-message', component:SendMessageComponent},
+    {path: 'conceptnote', component:ConteptNoteSubmissionComponent},
+    {path: 'std-profile', component:StudentProfileComponent},
+    //End Student
+    //For cordinator
     {path: 'view-concept-note', component:ViewConceptNoteComponent},
     {path: 'system-control', component:SystemControlComponent},
     {path: 'view-groups', component:ViewGroupsComponent},
     {path: 'cordinator-profile', component:CordinatorProfileComponent},
     {path: 'assign-group', component:AssignGroupComponent},
     {path: 'post-announcement', component:PostAnnouncementComponent},
+    //End cordinator
+    //For Supervisor
     {path: 'supervisor-group', component:MygroupComponent},
     {path: 'panel', component:PanelComponent},
     {path: 'received-concept', component:ReceivedConceptComponent},
     {path: 'std-messages', component:StdMessagesComponent},
     {path: 'submitted-report', component:SubmittedReportComponent},
     {path: 'supervisor-profile',component:SupervisorProfileComponent}
+    //End Supervisor
+   
+    
 ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);

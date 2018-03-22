@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
   <app-supervisor-left></app-supervisor-left>
   <section class="content">
   <div class="container-fluid">
-      <div class="block-header">
-          <h2>Supervisor std messages</h2>
-      </div>
+  <table  id="dtb" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <thead>
+      <tr>
+          <th>Title</th>
+          <th>Sendername</th>
+          <th>Message</th>
+          <th>Reply</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let view_supervisor of supervisors">
+          <td>view_supervisor</td>
+          <td>view_supervisor</td>     
+      </tr>                              
+  </tbody>
+</table>
   </div>
 </section>
   `,
