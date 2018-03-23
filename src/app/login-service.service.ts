@@ -11,22 +11,21 @@ export class LoginServiceService {
   signin(userid:any,pass:any){
     return this.http.get( "http://localhost:8000/api/auth?/username="+userid+"&password="+pass )
    // http://localhost:8000/api/auth/?username=2015-04-02589&password=sabinusi12
-  .map(
-    (response:Response)=>{
-      const token = response.json().token;
-      const base64Url=token.split('.')[1];
-      const base64=base64Url.replace('-', '+').replace('-', '/');
-      return {token: token, decoded: JSON.parse(window.atob(base64))};
+   .map((response: Response) => {
+    // login successful if there's a jwt token in the response
+    let user = response.json();
+    if (user && user.token) {
+        // store user details and jwt token in local storage to keep user logged in between page refreshes
+        localStorage.setItem('currentUser', JSON.stringify(user));
     }
-  )
-  .do(
-    tokenData=> {
-      localStorage.setItem('token', tokenData.token);
-    }
-  );
+   });
   }
   getToken(){
     return localStorage.getItem('token');
   }
+  logout() {
+    // remove user from local storage to log user out
+    localStorage.removeItem('currentUser');
+}
 
 }

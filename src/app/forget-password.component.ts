@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-forget-password',
   template: `
-  <div class="container-fluid" style="background-color: rgb(45, 163, 218);"  >
+  <div class="container-fluid">
   <div class="fp-page">
   <div class="fp-box">
       <div class="logo">
@@ -38,6 +38,10 @@ import { Component, OnInit } from '@angular/core';
   </div>
   `,
   styles: [`
+  .logo{
+      font-family: Courier New;
+      font-size:80;
+  }
   
   `]
 })

@@ -23,19 +23,20 @@ import { SupervisorProfileComponent } from "./supervisor/supervisor-profile.comp
 import { ForgetPasswordComponent } from "./forget-password.component";
 import { ConteptNoteSubmissionComponent } from "./student/contept-note-submission.component";
 import { StudentProfileComponent } from "./student/student-profile.component";
+import { AuthGuard } from "./auth.guard";
 const APP_ROUTES: Routes = [
    // {path: '', redirectTo: 'login', pathMatch: 'full' },
     {path: '',  component: LoginComponent},
     {path: 'forgetpassword', component:ForgetPasswordComponent},
-    {path: 'student-profile', component:StudentProfileComponent},
+    {path: 'student-profile', component:StudentProfileComponent, canActivate: [AuthGuard]},
     //For students
-    {path: 'student', component:CordinatorAnnaucementComponent},
-    {path: 'reports', component:ReportsComponent},
-    {path: 'view-supervisor', component:ViewSupervisorComponent,},
-    {path: 'project-archive', component:ProjectArchiveComponent},
-    {path: 'send-message', component:SendMessageComponent},
-    {path: 'conceptnote', component:ConteptNoteSubmissionComponent},
-    {path: 'std-profile', component:StudentProfileComponent},
+    {path: 'student', component:CordinatorAnnaucementComponent, canActivate: [AuthGuard]},
+    {path: 'reports', component:ReportsComponent, canActivate: [AuthGuard]},
+    {path: 'view-supervisor', component:ViewSupervisorComponent, canActivate: [AuthGuard]},
+    {path: 'project-archive', component:ProjectArchiveComponent,canActivate: [AuthGuard]},
+    {path: 'send-message', component:SendMessageComponent,canActivate: [AuthGuard]},
+    {path: 'conceptnote', component:ConteptNoteSubmissionComponent,canActivate: [AuthGuard]},
+    {path: 'std-profile', component:StudentProfileComponent,canActivate: [AuthGuard]},
     //End Student
     //For cordinator
     {path: 'view-concept-note', component:ViewConceptNoteComponent},

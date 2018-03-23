@@ -19,7 +19,7 @@ import { Component, OnInit } from '@angular/core';
                       <li><a href="javascript:void(0);"  ><i class="material-icons">person</i>Profile</a></li>
                       <li role="seperator" class="divider"></li>
                       
-                      <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                      <li><a href="javascript:void(0);" [routerLink]="['/']"><i class="material-icons">input</i>Sign Out</a></li>
                   </ul>
               </div>
           </div>

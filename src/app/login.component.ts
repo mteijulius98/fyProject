@@ -36,7 +36,7 @@ import { RouterModule, Router } from '@angular/router';
                             <i class="material-icons">lock</i>
                         </span>
                         <div class="form-line">
-                            <input type="password" [(ngModel)]="user.password" class="form-control" class="form-control"  placeholder="Password" required  name="pass">
+                            <input type="password" [(ngModel)]="user.pass" class="form-control" class="form-control"  placeholder="Password" required  name="pass">
                             </div>
                             
                               
@@ -50,7 +50,7 @@ import { RouterModule, Router } from '@angular/router';
                         </div>
                         <div class="col-xs-4">
                             <button type="submit" [disabled]="!f.valid" class="btn btn-block bg-pink waves-effect">SIGN IN</button>
-                            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                            
 
                             </div>
 
@@ -69,7 +69,9 @@ import { RouterModule, Router } from '@angular/router';
   `,
   styles: [
     `
-  
+  .logo{
+      font-family: Courier New;
+  }
 
     `
         ],
@@ -86,16 +88,23 @@ export class LoginComponent implements OnInit {
 private loginStatus:any;
 
   ngOnInit() {
+    this.loginService.logout();
   }
   onSignin(){
     this.loginService.signin(this.user.userid, this.user.pass)
     .subscribe(
-        
-      tokenData =>console.log(tokenData),
-     response =>this.router.navigate(['student'])
-     
-      
+        response => {
+            this.router.navigate(['/student']);
+            console.log(response)
+        },
+        error=>{
+            console.log(error)
+            alert("sorry u failed to login")
+    
+          }
+       
      // this.router.navigate(['student'])
     );
+   
   }
 }
