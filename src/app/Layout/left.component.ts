@@ -12,14 +12,14 @@ import { Component, OnInit } from '@angular/core';
           </div>
           <div class="info-container">
               <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
-              
+              <div class="email">john.doe@example.com</div>
               <div class="btn-group user-helper-dropdown">
                   <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                   <ul class="dropdown-menu pull-right">
-                      <li><a href="javascript:void(0);"  ><i class="material-icons">person</i>Profile</a></li>
+                      <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
                       <li role="seperator" class="divider"></li>
                       
-                      <li><a href="javascript:void(0);" [routerLink]="['/']"><i class="material-icons">input</i>Sign Out</a></li>
+                      <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
                   </ul>
               </div>
           </div>
@@ -29,41 +29,40 @@ import { Component, OnInit } from '@angular/core';
       <div class="menu">
           <ul class="list">
               <li class="header">MY OPTIONS</li>
-              <li class="active">
-                  <a href="javascript:void(0);" class="menu-toggle">
-                      <i class="material-icons">speaker_notes</i>
-                      <span>messages</span>
+              
+                      <li class="active">
+                      <a href="#" [routerLink]="['/student']">
+                          <i class="material-icons">speaker_note</i>
+                          <span>Announcement</span>
+                      </a>
+                  </li>
+                  <li class="active">
+                  <a href="#" [routerLink]="['/send-message']">
+                      <i class="material-icons">speaker_note</i>
+                      <span>Send Message</span>
                   </a>
-                  <ul class="ml-menu">
-                      <li>
-                          <a [routerLink]="['/student']">Announcements</a>
-                      </li>
-                      <li>
-                          <a [routerLink]="['/send-message']">sent messages</a>
-                      </li>
-                      </ul>
               </li>
               <li class="active">
-                  <a [routerLink]="['/conceptnote']">
+                  <a href="#" [routerLink]="['/conceptnote']">
                       <i class="material-icons">note_add</i>
                       <span>conceptnoteSubmission</span>
                   </a>
               </li>
-              <li>
-                  <a [routerLink]="['/view-supervisor']">
+              <li class="active">
+                  <a href="#" [routerLink]="['/view-supervisor']">
                       <i class="material-icons">view_list</i>
                       <span>View Supervisor</span>
                   </a>
                   
               </li>
-              <li>
-                  <a [routerLink]="['/reports']">
+              <li class="active">
+                  <a href="#" [routerLink]="['/reports']">
                       <i class="material-icons">report</i>
                       <span>Reports</span>
                   </a>
               </li>
-              <li>
-                <a [routerLink]="['/project-archive']">
+              <li class="active">
+                <a href="#" [routerLink]="['/project-archive']">
                     <i class="material-icons">assessment</i>
                     <span>Project Archive</span>
                 </a>
@@ -183,7 +182,7 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class LeftComponent implements OnInit {
-    private userData:any=JSON.parse( sessionStorage.getItem('token'));
+   
 
 
   constructor() { }

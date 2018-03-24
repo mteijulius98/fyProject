@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { LoginServiceService } from './login-service.service';
 import { NgForm } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
+import { LoaderService } from './loader.service';
+import { AlertService } from './alert.service';
 
 
 
@@ -12,19 +14,19 @@ import { RouterModule, Router } from '@angular/router';
   <div class="login-page">
     <div class="login-box">
         <div class="logo">
-            <a href="javascript:void(0);">LOG IN TO<small>(FYPMS)</small><b></b></a>
+            <a href="javascript:void(0);"><b></b></a>
             
         </div>
         <div class="card">
             <div class="body">
                 <form #f="ngForm" (ngSubmit)="onSignin(f)" role="form">
-                <div class="msg">Sign in to start your session</div>
+                <div class="msg">LOG IN TO<small>(FYPMS)</small></div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>
                         </span>
                         <div class="form-line">
-                            <input type="text"  [(ngModel)]="user.userid" class="form-control" name="student_id" placeholder="id number" maxlength="13" pattern="[0-9]{4}-[0-9]{2}-[0-9]{5}">
+                            <input type="text"  [(ngModel)]="user.userid" #userid="ngModel" class="form-control" name="student_id" placeholder="id number" maxlength="13" pattern="[0-9]{4}-[0-9]{2}-[0-9]{5}">
                              
                                                         
                                                 
@@ -36,7 +38,7 @@ import { RouterModule, Router } from '@angular/router';
                             <i class="material-icons">lock</i>
                         </span>
                         <div class="form-line">
-                            <input type="password" [(ngModel)]="user.pass" class="form-control" class="form-control"  placeholder="Password" required  name="pass">
+                            <input type="password" [(ngModel)]="user.pass" #pass="ngModel" class="form-control" class="form-control"  placeholder="Password" required  name="pass">
                             </div>
                             
                               
@@ -69,8 +71,9 @@ import { RouterModule, Router } from '@angular/router';
   `,
   styles: [
     `
-  .logo{
+  .logo,.msg{
       font-family: Courier New;
+      font-size:25px;
   }
 
     `
@@ -79,7 +82,8 @@ import { RouterModule, Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginService:LoginServiceService,private router:Router) { }
+  constructor(private loginService:LoginServiceService,private router:Router,
+     private loaderService: LoaderService,  private alertService: AlertService) { }
   user={
 	userid:'',
 	pass:'',
@@ -89,19 +93,23 @@ private loginStatus:any;
 
   ngOnInit() {
     this.loginService.logout();
+    //http call starts
+    this.loaderService.display(true);
+    //http call ends
+    this.loaderService.display(false);
   }
   onSignin(){
+      
     this.loginService.signin(this.user.userid, this.user.pass)
     .subscribe(
         response => {
-            this.router.navigate(['/student']);
-            console.log(response)
+            this.router.navigate([response.role]);
+            
         },
-        error=>{
-            console.log(error)
-            alert("sorry u failed to login")
-    
-          }
+        error => {
+            this.alertService.error(error);
+            
+        }
        
      // this.router.navigate(['student'])
     );

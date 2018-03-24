@@ -1,8 +1,6 @@
 import { Component, OnInit,ElementRef,AfterViewInit } from '@angular/core';
 import { StudentServiceService } from './student-service.service';
 import { ISupervisor } from '../supervisor/supervisor';
-import * as $ from 'jquery';
-import 'datatables.net';
 // var $ = require('jquery');
 // var dt = require('datatables.net');
 
@@ -67,7 +65,6 @@ import 'datatables.net';
   ]
 })
 export class ViewSupervisorComponent implements OnInit {
-    public tableWidget: any;
     supervisors:  ISupervisor[];
     errorMessage:string;
 

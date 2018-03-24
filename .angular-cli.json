@@ -32,8 +32,7 @@
        "./assets/plugins/jquery-spinner/css/bootstrap-spinner.css",
        "./assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css",
        "./assets/plugins/bootstrap-select/css/bootstrap-select.css",
-       "./assets/plugins/nouislider/nouislider.min.css",
-       "./assets/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css"
+       "./assets/plugins/nouislider/nouislider.min.css"
       ],
       "scripts": [
         "./assets/plugins/jquery/jquery.min.js",
@@ -45,16 +44,6 @@
         "./assets/js/pages/examples/sign-in.js",
         "./assets/js/admin.js",
         "./assets/js/demo.js",
-        "./assets/plugins/jquery-datatable/jquery.dataTables.js",
-        "./assets/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js",
-        "./assets/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js",
-        "./assets/plugins/jquery-datatable/extensions/export/buttons.flash.min.js",
-        "./assets/plugins/jquery-datatable/extensions/export/jszip.min.js",
-        "./assets/plugins/jquery-datatable/extensions/export/pdfmake.min.js",
-        "./assets/plugins/jquery-datatable/extensions/export/vfs_fonts.js",
-        "./assets/plugins/jquery-datatable/extensions/export/buttons.html5.min.js",
-        "./assets/plugins/jquery-datatable/extensions/export/buttons.print.min.js",
-        "./assets/js/pages/tables/jquery-datatable.js",
         "./assets/js/pages/ui/dialogs.js",
         "./assets/plugins/dropzone/dropzone.js",
         "./assets/js/pages/forms/advanced-form-elements.js",

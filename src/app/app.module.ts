@@ -40,6 +40,8 @@ import { ConteptNoteSubmissionComponent } from './student/contept-note-submissio
 import { StudentProfileComponent } from './student/student-profile.component';
 import{DataTablesModule} from 'angular-datatables';
 import { AuthGuard } from './auth.guard';
+import { LoaderService } from './loader.service';
+import { AlertService } from './alert.service';
 
 
 
@@ -89,7 +91,9 @@ import { AuthGuard } from './auth.guard';
   providers: [
     LoginServiceService,
     StudentServiceService,
-    AuthGuard
+    AuthGuard,
+    LoaderService,
+    AlertService
   ],
   bootstrap: [AppComponent]
 })

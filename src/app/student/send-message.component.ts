@@ -23,7 +23,7 @@ import { StudentServiceService } from './student-service.service';
             
             </div>
        
-         <form class="" style="margin-top: 2px;"  #for="ngForm" (ngSubmit)="sendMessage(for.value)"  >
+         <form class="form" style="margin-top: 2px;"  #for="ngForm" (ngSubmit)="sendMessage(for.value)"  >
          <div class="form-group">
          <div class="form-line">
              <textarea rows="5" class="form-control no-resize" placeholder="Please type what you want..."></textarea>
@@ -40,30 +40,7 @@ import { StudentServiceService } from './student-service.service';
           <!-- free area -->
        <!-- see message -->
        <div class="col-md-6">
-          <!-- heading  -->
-  
-           <div style="background-color: #dfe3ee;"class="status" >
-              <h4 style="text-align: center;padding-top: 5px;height: 30px;overflow: auto;" >message from supervisor &emsp; <b style="text-decoration: underline; font-style: italic;font-size: 14px;">{{supervisorname}}</b></h4>
-              
-              
-          </div>
-          <!-- heading  -->
-          <div *ngFor="let item of message,let i=index">
-            <div style="box-shadow: 0 0 2px 2px grey;">
-              <h5>
-                <a type="button" class="badge badge-pill" style="text-align: left;font-style: italic;" data-toggle="collapse" [attr.data-target]="'#'+i" >view
-                </a>
-                
-  
-                <b class="pull-right" style="text-align: right;">{{item.creted_at | date : 'shortDate'}}</b>
-  
-                
-              </h5>
-              <p [attr.id]="i" class="collapse">{{item.message_from_supervisor}}</p>
-              
-              
-            </div>
-          </div>
+       
           
       </div>
        <!-- see message -->
@@ -75,7 +52,9 @@ import { StudentServiceService } from './student-service.service';
 </section>
   `,
   styles: [`
-  
+  .form{
+    margin:5% auto;
+  }
   .write{
     box-shadow: 0 0 10px grey;
   }

@@ -7,14 +7,13 @@ import { Component, OnInit } from '@angular/core';
   <div class="fp-page">
   <div class="fp-box">
       <div class="logo">
-          <a href="javascript:void(0);">RECOVER PASSWORD FROM FYPTMS</a>
+          <a href="javascript:void(0);"></a>
       </div>
       <div class="card">
           <div class="body">
               <form id="forgot_password" method="POST">
                   <div class="msg">
-                      Enter your email address that you used to register. We'll send you an email with your username and a
-                      link to reset your password.
+                  RECOVER PASSWORD FROM<small>(FYPMS)</small>
                   </div>
                   <div class="input-group">
                       <span class="input-group-addon">
@@ -38,10 +37,10 @@ import { Component, OnInit } from '@angular/core';
   </div>
   `,
   styles: [`
-  .logo{
-      font-family: Courier New;
-      font-size:80;
-  }
+  .msg{
+    font-family: Courier New;
+    font-size:25px;
+}
   
   `]
 })
