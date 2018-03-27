@@ -67,7 +67,6 @@ import { ISupervisor } from '../supervisor/supervisor';
 export class ViewSupervisorComponent implements OnInit {
     supervisors:  ISupervisor[];
     errorMessage:string;
-
     public constructor(private service:StudentServiceService) {
     
     }

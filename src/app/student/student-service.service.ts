@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Http, Response,RequestOptions,Headers,URLSearchParams } from '@angular/http';
-
+import { LoginServiceService } from "../login-service.service";
 @Injectable()
 export class StudentServiceService {
+   
+  constructor(private http:Http,private loginService:LoginServiceService) { }
 
-  constructor(private http:Http) { }
   // private userData:any=JSON.parse( sessionStorage.getItem('userData'));
   // public name:string=this.userData['firstname']
   // public registrationsnumber:string=this.userData['student_reg_no']
@@ -22,9 +23,10 @@ getAnaucements(){
   
 
   public viewSuperVisors(){
-
-    return this.http.get("http://localhost:8000/std/supervisors").map(
+     const token = this.loginService.getToken();
+    return this.http.get("http://localhost:8000/api/view_supervisor").map(
   (res:Response)=>res.json()
+  // http://localhost:8000/api/auth/?username=2015-04-02589&password=sabinusi12
       );
   }
   public ViewSuperVisorWithExperties(){

@@ -31,6 +31,7 @@ import { Component, OnInit } from '@angular/core';
         </div>
      </div>
      <div class="form-group">
+     <div class="input-group">
      <label for="proposed title">WRITE YOUR PRPOSED TITLE HERE</label>
      <div class="form-line">
          <textarea rows="4" class="form-control no-resize" placeholder="Please type what you want..."></textarea>
@@ -48,6 +49,7 @@ import { Component, OnInit } from '@angular/core';
          <input name="file" maxFiles=1 type="file" />
      </div>
  </form>
+</div>
 </div>
  <div class="form-group">
  <label for="email" style="font-size:16px; text-transform: uppercase;word-spacing: 2px;">propose-Supervisor </label>

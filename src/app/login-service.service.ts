@@ -27,5 +27,8 @@ export class LoginServiceService {
     // remove user from local storage to log user out
     localStorage.removeItem('currentUser');
 }
+getToken(){
+  return localStorage.getItem('currentUser');
+}
 
 }

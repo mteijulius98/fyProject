@@ -56,7 +56,9 @@
         "./assets/plugins/nouislider/nouislider.js",
        "./assets/js/pages/examples/sign-in.js",
        "./assets/plugins/chartjs/Chart.bundle.js",
-       "./assets/js/pages/charts/chartjs.js"
+       "./assets/js/pages/charts/chartjs.js",
+      "./assets/js/pages/forms/basic-form-elements.js"
+
        
 
 

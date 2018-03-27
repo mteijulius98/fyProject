@@ -106,12 +106,13 @@ private loginStatus:any;
             this.router.navigate([response.role]);
             
         },
-        error => {
+        error=>{
+            alert("sorry u failed to login")
             this.alertService.error(error);
-            
-        }
+    
+          }
        
-     // this.router.navigate(['student'])
+     
     );
    
   }
