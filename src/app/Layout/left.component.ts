@@ -31,38 +31,38 @@ import { Component, OnInit } from '@angular/core';
               <li class="header">MY OPTIONS</li>
               
                       <li class="active">
-                      <a href="#" [routerLink]="['/student']">
+                      <a href="/student">
                           <i class="material-icons">speaker_note</i>
                           <span>Announcement</span>
                       </a>
                   </li>
                   <li class="active">
-                  <a href="#" [routerLink]="['/send-message']">
+                  <a href="/send-message">
                       <i class="material-icons">speaker_note</i>
                       <span>Send Message</span>
                   </a>
               </li>
               <li class="active">
-                  <a href="#" [routerLink]="['/conceptnote']">
+                  <a href="/conceptnote">
                       <i class="material-icons">note_add</i>
                       <span>conceptnoteSubmission</span>
                   </a>
               </li>
               <li class="active">
-                  <a href="#" [routerLink]="['/view-supervisor']">
+                  <a href="/view-supervisor">
                       <i class="material-icons">view_list</i>
                       <span>View Supervisor</span>
                   </a>
                   
               </li>
               <li class="active">
-                  <a href="#" [routerLink]="['/reports']">
+                  <a href="/reports">
                       <i class="material-icons">report</i>
                       <span>Reports</span>
                   </a>
               </li>
               <li class="active">
-                <a href="#" [routerLink]="['/project-archive']">
+                <a href="/project-archive">
                     <i class="material-icons">assessment</i>
                     <span>Project Archive</span>
                 </a>

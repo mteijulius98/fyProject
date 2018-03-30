@@ -45,10 +45,8 @@ export class CordinatorAnnaucementComponent implements OnInit {
     errorMessage:string;
   constructor(private stService:StudentServiceService) { }
 
-  ngOnInit():void {
-    this.stService.getAnaucements().subscribe(
-      cordinators => this.cordinators = cordinators,
-      error => this.errorMessage = <any>error);
+  ngOnInit() {
+    
   
 } 
 

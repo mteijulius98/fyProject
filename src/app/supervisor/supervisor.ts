@@ -1,8 +1,9 @@
 export interface ISupervisor{
-    employee_id:number;
+    
     name: string;
+    phone_number: string;
+   sex:string;
+   experties: string;
     email: string;
-    phonenumber: string;
-    experties: string;
-    oficenumber:string; 
+    ofice_number:string; 
 }

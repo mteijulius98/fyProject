@@ -13,10 +13,11 @@ export class LoginServiceService {
    // http://localhost:8000/api/auth/?username=2015-04-02589&password=sabinusi12
    .map((response: Response) => {
     // login successful if there's a jwt token in the response
-    let user = response.json();
-    if (user && user.token) {
+    let  user = response.json();
+    if (user) {
         // store user details and jwt token in local storage to keep user logged in between page refreshes
-        localStorage.setItem('currentUser', JSON.stringify(user));
+        //localStorage.setItem('token', JSON.stringify(user));
+       localStorage.setItem('token',user.token);
     }
     return user;
    });
@@ -25,10 +26,11 @@ export class LoginServiceService {
   
   logout() {
     // remove user from local storage to log user out
-    localStorage.removeItem('currentUser');
+    localStorage.removeItem('token');
+  
 }
 getToken(){
-  return localStorage.getItem('currentUser');
+  return localStorage.getItem('token');
 }
 
 }

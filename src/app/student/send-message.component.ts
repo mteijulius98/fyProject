@@ -9,64 +9,35 @@ import { StudentServiceService } from './student-service.service';
   <section class="content">
  
   <div class="container-fluid">
-
-      <div *ngIf="!hide" style="text-align: center;" class="alert alert-info">
-      <p>sorry can't acces the service without submit ConceptNote</p>
-    </div>
-    
-     <div class="row" *ngIf="hide">
-     <!-- write message -->
-       <div class="col-md-5 write " >
-            
-            <div style="background-color: #dfe3ee;"class="status" >
-            <h4 style="text-align: center;padding-top: 5px;height: 30px;"  >message to supervisor</h4>
-            
-            </div>
-       
-         <form class="form" style="margin-top: 2px;"  #for="ngForm" (ngSubmit)="sendMessage(for.value)"  >
-         <div class="form-group">
-         <div class="form-line">
-             <textarea rows="5" class="form-control no-resize" placeholder="Please type what you want..."></textarea>
-         </div>
-     </div>
-             <button type="submit" class="btn btn-primary form-control" style="text-align: center;margin-bottom: 5px;color: red;" [disabled]="!for.valid">send</button>
-           </form>
-           
-       </div>
-  
-       <!-- write message -->
-          <!-- free area -->
-          <div class="col-md-1"></div>
-          <!-- free area -->
-       <!-- see message -->
-       <div class="col-md-6">
-       
-          
-      </div>
-       <!-- see message -->
-     </div>
-   
+  <div class='panel panel-primary' align="center">
+  <div class='panel-heading'>
+      {{pageTitle}}
+  </div>
+  <div class="panel-body">
+  <form>
+  <div class="form-group">
+  <div class="form-line">
+      <textarea rows="10" class="form-control no-resize auto-growth" placeholder="Please type what you want... And please don't forget the ENTER key press multiple times :)"></textarea>
+  </div>
+</div>
+<button  class="btn btn-primary" type ="submit" style="text-align: center;margin-bottom: 5px;color: red;" [disabled]="!f.valid">Send Message</button>
+</form>
+     
+   </div>
+   </div>
   
   
   </div>
 </section>
   `,
   styles: [`
-  .form{
-    margin:5% auto;
-  }
-  .write{
-    box-shadow: 0 0 10px grey;
-  }
-  .status{
-    box-shadow: 0 10px 5px 1px #dfe3ee;
-    box-shadow: 0 7px 0 -5px #8A42FF;
-    box-shadow: 0 6px 0 -4px #8A42FF;
-  }
+  
+  
   `]
 })
 export class SendMessageComponent implements OnInit {
   private hide:boolean=true;
+  pageTitle='FOR SENDING MESSAGE';
   private message:any;
   private Studentmessage:any;
   private supervisorname:string;

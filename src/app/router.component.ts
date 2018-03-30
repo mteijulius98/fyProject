@@ -47,7 +47,7 @@ const APP_ROUTES: Routes = [
     {path: 'post-announcement', component:PostAnnouncementComponent},
     //End cordinator
     //For Supervisor
-    {path: 'supervisor-group', component:MygroupComponent},
+    {path: 'supervisor', component:MygroupComponent},
     {path: 'panel', component:PanelComponent},
     {path: 'received-concept', component:ReceivedConceptComponent},
     {path: 'std-messages', component:StdMessagesComponent},

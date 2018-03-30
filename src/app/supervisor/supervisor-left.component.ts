@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-supervisor-left',
   template: `
@@ -31,25 +32,25 @@ import { Component, OnInit } from '@angular/core';
               <li class="header">MY OPTIONS</li>
            
               <li class="active">
-                  <a href="../../index.html">
+                  <a href="/supervisor">
                       <i class="material-icons">featured_play_list</i>
                       <span>My Group</span>
                   </a>
               </li>
               <li class="active">
-                  <a href="../../pages/typography.html">
+                  <a href="/panel">
                       <i class="material-icons">view_list</i>
                       <span>panel</span>
                   </a>
               </li>
               <li class="active">
-                  <a href="../../pages/helper-classes.html">
+                  <a href="/received-concept">
                       <i class="material-icons">view_week</i>
                       <span>Received Concept Note</span>
                   </a>
               </li>
               <li class="active">
-                  <a href="../../pages/helper-classes.html">
+                  <a href="/submitted-report">
                       <i class="material-icons">archive</i>
                       <span>Submitted Report</span>
                   </a>
@@ -179,5 +180,6 @@ export class SupervisorLeftComponent implements OnInit {
 
   ngOnInit() {
   }
+ 
 
 }

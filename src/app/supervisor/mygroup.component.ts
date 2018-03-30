@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router, ActivatedRoute, Params} from '@angular/router';
 
 @Component({
   selector: 'app-mygroup',
@@ -21,5 +22,5 @@ export class MygroupComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }
