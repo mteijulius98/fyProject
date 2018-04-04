@@ -17,10 +17,10 @@ import { StudentServiceService } from './student-service.service';
   <form>
   <div class="form-group">
   <div class="form-line">
-      <textarea rows="10" class="form-control no-resize auto-growth" placeholder="Please type what you want... And please don't forget the ENTER key press multiple times :)"></textarea>
+      <textarea rows="10" class="form-control no-resize auto-growth" placeholder="Please type what you want"></textarea>
   </div>
 </div>
-<button  class="btn btn-primary" type ="submit" style="text-align: center;margin-bottom: 5px;color: red;" [disabled]="!f.valid">Send Message</button>
+<button  class="btn btn-primary" type ="submit" style="text-align: center;margin-bottom: 5px;" >Send Message</button>
 </form>
      
    </div>

@@ -16,7 +16,7 @@ export class LoginServiceService {
     let  user = response.json();
     if (user) {
         // store user details and jwt token in local storage to keep user logged in between page refreshes
-        //localStorage.setItem('token', JSON.stringify(user));
+        localStorage.setItem('currentUser', JSON.stringify(user));
        localStorage.setItem('token',user.token);
     }
     return user;
@@ -27,10 +27,12 @@ export class LoginServiceService {
   logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('token');
+    localStorage.removeItem('currentUser');
   
 }
 getToken(){
   return localStorage.getItem('token');
+  
 }
 
 }
